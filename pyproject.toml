@@ -1,0 +1,11 @@
+[project]
+name = "sigint-acled-intelligence-dashboard"
+version = "0.1.0"
+description = "OSINT intelligence pipeline and Power BI dashboard built on ACLED global conflict data"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
