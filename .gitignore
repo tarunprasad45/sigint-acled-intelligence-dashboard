@@ -1,0 +1,6 @@
+# Data files
+data/raw/*.xlsx
+data/processed/*.csv
+
+data/raw/.gitkeep
+data/processed/.gitkeep
