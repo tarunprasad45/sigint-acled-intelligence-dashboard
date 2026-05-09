@@ -119,9 +119,6 @@ python clean_combine.py --data-dir /path/to/raw --output /path/to/output.csv
 | 2 — Regional deep-dive | Region-by-region breakdown | Area chart, YoY bar, fatality heatmap, scatter |
 | 3 — Classification & quality audit | Data integrity and source traceability | Geocode completeness, source file audit, classification table |
 | 4 — Risk intelligence matrix | Severity scoring and escalation | Risk quadrant, escalation table, quarterly heatmap |
-| 5 — Political violence focus | Terrorism and armed conflict | Attack type breakdown, high-fatality events table |
-
-Full build instructions including all DAX measures: `docs/DASHBOARD_BUILD_GUIDE.md`
 
 ---
 
@@ -141,21 +138,24 @@ Full build instructions including all DAX measures: `docs/DASHBOARD_BUILD_GUIDE.
 ## Project structure
 
 ```
-sigint/
-├── clean_combine.py              ← ETL pipeline (run this first)
-├── requirements.txt
-├── LICENSE
-├── README.md
+sigint-acled-intelligence-dashboard/
+│
+├── dashboard/
+│   ├── SIGINT_ACLED_Intelligence_Dashboard.pbix
+│   └── screenshots/
+│       ├── global_overview.png
+│       ├── regional_deep_dive.png
+│       ├── classification_audit.png
+│       ├── risk_matrix.png
+│       └── political_violence.png
+│
 ├── data/
-│   ├── raw/                      ← 6 original ACLED xlsx files
-│   └── processed/                ← acled_master.csv (gitignored — regenerate)
-└── docs/
-    ├── DASHBOARD_BUILD_GUIDE.md  ← Full Power BI build instructions + DAX
-    └── screenshots/              ← Dashboard page screenshots
+├── docs/
+├── src/
+├── README.md
+└── requirements.txt
+
 ```
-
----
-
 ## Disclaimer
 
 All data is sourced from ACLED, a publicly available research dataset. This project is for educational and portfolio purposes. ACLED data is subject to their own terms of use — see [acleddata.com/terms-of-use](https://acleddata.com/terms-of-use/).
@@ -165,3 +165,4 @@ All data is sourced from ACLED, a publicly available research dataset. This proj
 ## License
 
 MIT — see [LICENSE](LICENSE)
+
